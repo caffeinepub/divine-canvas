@@ -1,0 +1,107 @@
+@font-face {
+  font-family: "Fraunces";
+  src: url("/assets/fonts/Fraunces.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Crimson Pro";
+  src: url("/assets/fonts/CrimsonPro.woff2") format("woff2");
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/assets/fonts/GeneralSans.woff2") format("woff2");
+  font-weight: 200 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* ── Divine Canvas – Maroon & Gold Spiritual Palette ── */
+    --background: 97 0.012 85;
+    --foreground: 22 0.05 30;
+
+    --card: 100 0 0;
+    --card-foreground: 22 0.05 30;
+
+    --popover: 100 0 0;
+    --popover-foreground: 22 0.05 30;
+
+    --primary: 33 0.16 18;
+    --primary-foreground: 97 0.012 85;
+
+    --secondary: 93 0.01 80;
+    --secondary-foreground: 22 0.05 30;
+
+    --muted: 93 0.01 80;
+    --muted-foreground: 52 0.02 50;
+
+    --accent: 72 0.16 75;
+    --accent-foreground: 20 0.04 15;
+
+    --destructive: 28 0.19 27;
+    --destructive-foreground: 97 0.01 95;
+
+    --border: 88 0.015 78;
+    --input: 88 0.015 78;
+    --ring: 72 0.12 60;
+
+    --radius: 0.625rem;
+
+    /* ── Brand tokens ── */
+    --maroon: 33 0.16 18;
+    --maroon-dark: 24 0.14 13;
+    --maroon-light: 40 0.12 28;
+    --gold: 72 0.16 75;
+    --gold-bright: 80 0.19 86;
+    --gold-dim: 65 0.12 68;
+    --cream: 97 0.012 85;
+    --cream-dark: 94 0.02 78;
+  }
+
+  * {
+    border-color: oklch(var(--border));
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: oklch(var(--background));
+    color: oklch(var(--foreground));
+    font-family: "General Sans", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Fraunces", serif;
+  }
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: oklch(var(--cream));
+}
+::-webkit-scrollbar-thumb {
+  background: oklch(var(--maroon) / 0.5);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: oklch(var(--maroon));
+}
